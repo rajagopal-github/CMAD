@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        .button {
+            width: 100px;
+            height: 25px;
+        }
+
+        .counterContainer {
+            height: 200px;
+            width: 98%;
+            border:solid;
+            padding-left: 20px;
+            margin  : 20px;
+        }
+
+        .counterBoxError{
+            height: 35%;
+            padding-top: 5px;
+            font-size: 40pt;
+            border:solid;
+            background-color: red;
+        }
+        .counterBoxWarning{
+            height: 35%;
+            padding-top: 5px;
+            font-size: 40pt;
+            border:solid;
+            background-color: yellow;
+        }
+        .counterBoxInfo{
+            height: 35%;
+            padding-top: 5px;
+            font-size: 40pt;
+            border:solid;
+            background-color: greenyellow;
+        }
+        .counterLabel {
+            font-size: 40px;
+        }
+
+        td {
+
+
+            text-align: center;
+            
+
+        }
+
+        th {
+            height: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        body{
+            padding:20px
+        }
+       
+    </style>
+</head>
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="container-fluid">
+        <br />
+        <div class="row">
+            <div class="col-lg-12 text-right">
+                <button class="btn btn-lg">
+                    <span class=" glyphicon glyphicon-user"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#">Dashboard</a></li>
+        </ul>
+
+        <br><br>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <form>
+                        <label style="padding-right:20px; padding-left: 20px">Interval </label>
+                        <select id="interval">
+                            <option>1 Min</option>
+                            <option>2 Min</option>
+                            <option>3 Min</option>
+                            <option>4 Min</option>
+                            <option selected>5 Min</option>
+                            <option>10 Min</option>
+                            <option>15 Min</option>
+                        </select>
+                    </form>
+                </div>
+
+                <div class="col-lg-4">
+                    <label style="padding-right:20px">Last Updated On: </label>
+                    <input type="text" id="lastUpdatedTime" disabled value="25/12/2018 12:12:45"></input>
+                </div>
+                <div class="col-lg-2">
+                    <button type="button" class="button">Update</button>
+                </div>
+            </div>
+        </div>
+        <div id="counterContainer">
+            
+        </div>
+    </div>
+
+    <!--postitioning the table -->
+    <div class="container-fluid">
+        <div class="row" style="padding-top: 30px">
+            <div class="col-lg-9" align="left">
+                <form>
+                    <label style="padding-right:20px; padding-left: 20px">Time zone: </label>
+                    <select id="interval">
+                        <option>UTC-12:00</option>
+                        <option>UTC-11:00</option>
+                        <option>UTC-10:00</option>
+                        <option>UTC-09:00</option>
+                        <option selected>UTC-08:00</option>
+                        <option>UTC-07:00</option>
+                        <option>UTC-06:00</option>
+                    </select>
+                </form>
+            </div>
+            <div class="col-lg-3" align="right">
+                <form>
+                    <label style="padding-right:20px; padding-left: 20px">Filters: </label>
+                    <input type="text" placeholder="Type:WARNING"></input>
+                </form>
+            </div>
+        </div>
+
+        <div class="row" style="padding: 20px">
+            <table class="table table-bordered table-hover" id="syslogTable">
+                <tr>
+                    <th style="width:20%">Timestamp</th>
+                    <th style="width:10%">IP Address</th>
+                    <th style="width:60%">Message</th>
+                    <th style="width:10%">Type</th>
+                </tr>
+
+                <tr>
+                    <td>12/12/2018 23:45</td>
+                    <td>10.10.10.14</td>
+                    <td>Authentication failure for user admin</td>
+                    <td>ERROR</td>
+                </tr>
+
+            </table>
+        </div>
+
+    </div>
+    <div id="test">
+
+    </div>
+
+</body>
+
+</html>
