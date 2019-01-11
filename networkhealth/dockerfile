@@ -1,4 +1,4 @@
-FROM Maven as build
+FROM maven as build
 WORKDIR /opt/networkhealth
 COPY . WORKDIR
 RUN mvn package -DskipTests
