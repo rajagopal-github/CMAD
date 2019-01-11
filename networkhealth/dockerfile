@@ -1,6 +1,6 @@
 FROM maven as build
 WORKDIR /opt/networkhealth
-COPY . WORKDIR
+COPY . .
 RUN mvn package -DskipTests
 
 FROM alpine:latest
