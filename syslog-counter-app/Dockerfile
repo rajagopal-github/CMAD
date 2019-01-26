@@ -3,4 +3,4 @@ WORKDIR /opt/
 COPY . .
 EXPOSE 3000
 RUN npm install
-CMD cd /opt/syslog-counter-app && npm start
+CMD cd /opt/syslog-counter-app && npm install && npm start
