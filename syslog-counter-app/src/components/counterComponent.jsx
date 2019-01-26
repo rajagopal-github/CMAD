@@ -10,7 +10,7 @@ export class Counter extends Component {
     };
   }
   updateCounterStore() {
-    fetch("http://localhost:8080/v1/network/health/v1/events/syslog/counters")
+    fetch("http://cmad:8080/v1/network/health/v1/events/syslog/counters")
       .then(results => {
         return results.json();
       })
