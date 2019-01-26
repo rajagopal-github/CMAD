@@ -1,4 +1,4 @@
-FROM Node:current-alpine
+FROM node:current-alpine
 WORKDIR /opt/syslog-counter-app
 COPY . .
 EXPOSE 3000
