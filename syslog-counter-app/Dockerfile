@@ -1,6 +1,6 @@
 FROM node:current-alpine
-WORKDIR /opt/syslog-counter-app
+WORKDIR /opt/
 COPY . .
 EXPOSE 3000
 RUN npm install
-CMD npm start
+CMD cd /opt/syslog-counter-app && npm start
